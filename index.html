@@ -1,94 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Shirley</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="sherry,前端" />
-  
-上
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yechunxi">
-<meta property="og:url" content="http://yechunxi.github.io/index.html">
-<meta property="og:site_name" content="yechunxi">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yechunxi">
-<meta name="twitter:description">
-  
-  
-
-  
-
-
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
-  <script> 
-    window.NEM = window.NEM || {};  
-    NEM.marksArr=[]; NEM.mark=function(markName,send){var obj={"markName":markName,"time":+new Date(),"send":send ? send : false};if(markName && typeof markName === "string"){ NEM.marksArr.push(obj)}};
-
-    window.NEM.config = {'key':'1122334455','clientStart':new Date().getTime()}; 
-  (function() {var n = document.getElementsByTagName('script')[0],s = document.createElement('script');s.async="async";s.src = '/js/nem.js';n.parentNode.insertBefore(s, n);})();
-    </script>
-    <script src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
-    <link href="http://www.kaola.com/r/core.css?86023db32069c6707278ebefc9a91e32" type="text/css" rel="stylesheet"/>
-    <style type="text/css">
-    * {padding: 0;margin: 0;}
-    body {font:12px/1.14 arial,\5b8b\4f53;}
-
-    #wrap {margin: -40px auto 0;}
-    #wrap p.title {height: 60px; line-height: 60px; font-size: 30px; text-align: center;margin: 20px;}
-    #wrap .m-ua-info ul li {margin-bottom: 10px;font-size:14px;}
-    #wrap .m-ua-info ul li:before {content: '';background:#fff;}
-    #wrap .m-ua-info ul,#wrap .m-ua-info li{list-style:none;}
-    #wrap .m-ua-info .name {display: inline-block; width: 250px;}
-    #wrap .m-ua-info .value {max-width:400px;background-color: #000;color: #fff;padding: 5px 10px;display:inline-block;}
-    </style>
-    <script>NEM.mark("blankscreen");</script>
-  <!-- 
- -->
-</head>
-
-<body>
-  <div class="content-home text-center">
-  <a class="avatar" href="/">
-    <img src="/images/avatar.jpg" alt="" />
-  </a>
-  <h1 class="name">
-    sherry
-  </h1>
-  <div class="slogan">
-   
-  </div>
-  <hr>
-
-  <ul class="text-center nav">
-    
-      
-        <li class="item">
-          <a href="/archives" target="_blank">Blog</a>
-          <span>|</span>
-        </li>
-      
-    
-      
-        <li class="item">
-          <a href="https://github.com/tanxuewei" target="_blank">Github</a>
-          <span>|</span>
-        </li>
-      
-    
-      
-  </ul>
-
-</div>
-
-  
-
-  
-</body>
-</html>
+---
+　　layout: default
+　　title: 我的Blog
+　　---
+　　<h2>{{ page.title }}</h2>
+　　<p>最新文章</p>
+　　<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+　　</ul>
