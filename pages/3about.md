@@ -2,9 +2,12 @@
 layout: page
 title: About
 permalink: /about/
-icon: glyphicon-heart
+icon: heart
 ---
 
-### 关于我
+* content
+{:toc}
+
+## 关于我
 
 
